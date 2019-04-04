@@ -35,6 +35,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "baseHref": "https://joshmleslie.github.io/SaturdayDnDSpotify/",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
