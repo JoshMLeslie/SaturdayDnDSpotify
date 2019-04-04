@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod"
+    "postinstall": "ng build --aot --prod",
+    "toGithubPages": "ng build --prod && ngh"
   },
   "engines": {
     "node": "8.11.3",
