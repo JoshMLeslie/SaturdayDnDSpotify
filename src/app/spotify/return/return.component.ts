@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-return',
@@ -8,10 +8,17 @@ import {Router} from '@angular/router';
 })
 export class ReturnComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    debugger
+    debugger;
+
+    const parsedUrl: [string, string][] = this.route.snapshot.fragment
+      .split('&')
+      .map(o => o.split('=') as [string, string]); // necessary typing
+
+    // dunno if useful but it works out real nice.
+    const urlParamMap: Map<string, string> = new Map(parsedUrl);
   }
 
 }
